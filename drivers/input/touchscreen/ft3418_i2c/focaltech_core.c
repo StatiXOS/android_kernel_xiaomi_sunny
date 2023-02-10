@@ -1232,7 +1232,7 @@ static void fts_resume_work(struct work_struct *work)
 static void fts_suspend_work(struct work_struct *work)
 {
     struct fts_ts_data *ts_data = container_of(work, struct fts_ts_data,
-                    suspend_work);
+                    resume_work);
 
     fts_ts_suspend(ts_data->dev);
 }
